@@ -27,10 +27,10 @@ public class LoginController {
             subject.login(token);
             SysUser user = (SysUser) subject.getPrincipal();
         } catch (DisabledAccountException e) {
-            request.setAttribute("msg", "账户已被禁用");
+            request.setAttribute("msg", "账户已被禁用!");
             return "login";
         } catch (AuthenticationException e) {
-            request.setAttribute("msg", "用户名或密码错误");
+            request.setAttribute("msg", "用户名或密码错误!");
             return "login";
         }
 
