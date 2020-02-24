@@ -46,7 +46,7 @@ public class LoginController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String loginSuccessMessage(HttpServletRequest request) {
-        String username = "未登录";
+        String username = "还未未登录";
         SysUser currentLoginUser = RequestUtils.currentLoginUser();
 
         if (currentLoginUser != null && StringUtils.isNotEmpty(currentLoginUser.getUserName())) {
