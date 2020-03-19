@@ -15,7 +15,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Component
 public class LoginBackInterceptor extends HandlerInterceptorAdapter {
-	
+
+	/**
+	 * 每次提交表单login,退出当前登陆用户
+	 * 解决回退时重新登陆要登陆2次的情况
+	 * @param request
+	 * @param response
+	 * @param handler
+	 * @return
+	 * @throws Exception
+	 */
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
