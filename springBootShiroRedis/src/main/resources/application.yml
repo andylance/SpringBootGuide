@@ -1,13 +1,16 @@
 spring:
+  # 数据源配置
   datasource:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true&serverTimezone=UTC&characterEncoding=utf8
     username: root
+  #Spring MVC配置
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  #Redis配置
   redis:
     # Redis默认情况下有16个分片，这里配置具体使用的分片，默认是0
     database: 0
