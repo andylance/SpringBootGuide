@@ -21,6 +21,9 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 单用户登录过滤器
+ */
 public class KickoutSessionControlFilter extends AccessControlFilter {
 
     private String kickoutUrl; //踢出后到的地址
