@@ -28,6 +28,9 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
 
     private String kickoutUrl; //踢出后到的地址
 
+    /**
+     * session 踢出 key
+     */
     private static final String SESSION_KICKOUT_KEY = "session_kickout_key";
 
     private SessionManager sessionManager;
