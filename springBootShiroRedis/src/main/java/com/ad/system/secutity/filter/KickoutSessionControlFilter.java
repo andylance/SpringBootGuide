@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public class KickoutSessionControlFilter extends AccessControlFilter {
 
-    private String kickoutUrl; //踢出后到的地址
+    private String kickoutUrl; //踢出后到的地址, 需要提前注入
 
     /**
      * session 踢出 key
