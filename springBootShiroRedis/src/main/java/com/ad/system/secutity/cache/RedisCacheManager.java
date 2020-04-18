@@ -14,6 +14,9 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+/**
+ * redis缓存管理器
+ */
 public class RedisCacheManager implements CacheManager {
 
     private final Logger logger = LoggerFactory.getLogger(org.crazycake.shiro.RedisCacheManager.class);
