@@ -24,6 +24,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * shiro cache实现
+ * @param <K>
+ * @param <V>
+ */
 public class RedisCache<K, V> implements Cache<K, V> {
 
     private static Logger logger = LoggerFactory.getLogger(org.crazycake.shiro.RedisCache.class);
