@@ -26,6 +26,7 @@ import java.util.Set;
 
 /**
  * shiro cache实现
+ *
  * @param <K>
  * @param <V>
  */
@@ -41,12 +42,11 @@ public class RedisCache<K, V> implements Cache<K, V> {
     private String principalIdFieldName = RedisCacheManager.DEFAULT_PRINCIPAL_ID_FIELD_NAME;
 
     /**
-     *
-     * @param redisManager redisManager
-     * @param keySerializer keySerializer
-     * @param valueSerializer valueSerializer
-     * @param prefix authorization prefix
-     * @param expire expire
+     * @param redisManager         redisManager
+     * @param keySerializer        keySerializer
+     * @param valueSerializer      valueSerializer
+     * @param prefix               authorization prefix
+     * @param expire               expire
      * @param principalIdFieldName id field name of principal object
      */
     public RedisCache(IRedisManager redisManager, RedisSerializer keySerializer, RedisSerializer valueSerializer, String prefix, int expire, String principalIdFieldName) {
@@ -73,6 +73,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
 
     /**
      * get shiro authorization redis key-value
+     *
      * @param key key
      * @return value
      * @throws CacheException get cache exception
@@ -107,7 +108,8 @@ public class RedisCache<K, V> implements Cache<K, V> {
         try {
             Object redisCacheKey = getRedisCacheKey(key);
             logger.debug("put key [" + redisCacheKey + "]");
-            redisManager.set(keySerializer.serialize(redisCacheKey), value != null ? valueSerializer.serialize(value) : null, expire);
+            redisManager.set(keySerializer.serialize(redisCacheKey),
+                    value != null ? valueSerializer.serialize(value) : null, expire);
             return value;
         } catch (SerializationException e) {
             throw new CacheException(e);
@@ -204,13 +206,14 @@ public class RedisCache<K, V> implements Cache<K, V> {
         if (keys == null || keys.size() == 0) {
             return;
         }
-        for (byte[] key: keys) {
+        for (byte[] key : keys) {
             redisManager.del(key);
         }
     }
 
     /**
      * get all authorization key-value quantity
+     *
      * @return key-value size
      */
     @Override
@@ -240,7 +243,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         }
 
         Set<K> convertedKeys = new HashSet<K>();
-        for (byte[] key:keys) {
+        for (byte[] key : keys) {
             try {
                 convertedKeys.add((K) keySerializer.deserialize(key));
             } catch (SerializationException e) {
