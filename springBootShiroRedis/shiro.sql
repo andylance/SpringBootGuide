@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50716
 File Encoding         : 65001
 
-Date: 2018-04-20 15:21:20
+Date: 2019-04-20 15:21:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -162,10 +162,10 @@ INSERT INTO `sys_user_role` VALUES ('4', '3', '1');
 DROP PROCEDURE IF EXISTS `init_shiro_demo`;
 DELIMITER ;;
 CREATE DEFINER=`root`@`%` PROCEDURE `init_shiro_demo`()
-BEGIN	
+BEGIN
 /*
-SQLyog 企业版 - MySQL GUI v7.14 
-MySQL - 5.6.16-log : Database - 
+SQLyog 企业版 - MySQL GUI v7.14
+MySQL - 5.6.16-log : Database -
 *********************************************************************
 */
 /*表结构插入*/
@@ -209,7 +209,7 @@ CREATE TABLE `u_user_role` (
   `rid` bigint(20) DEFAULT NULL COMMENT '角色ID'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*
-SQLyog 企业版 - MySQL GUI v7.14 
+SQLyog 企业版 - MySQL GUI v7.14
 MySQL - 5.6.16-log : Database - i_wenyiba_com
 *********************************************************************
 */
@@ -224,7 +224,7 @@ insert  into `u_role_permission`(`rid`,`pid`) values (4,8),(4,9),(4,10),(4,11),(
 insert  into `u_user`(`id`,`nickname`,`email`,`pswd`,`create_time`,`last_login_time`,`status`) values (1,'管理员','admin','9c3250081c7b1f5c6cbb8096e3e1cd04','2016-06-16 11:15:33','2016-06-16 11:24:10',1),(11,'soso','8446666@qq.com','d57ffbe486910dd5b26d0167d034f9ad','2016-05-26 20:50:54','2016-06-16 11:24:35',1),(12,'8446666','8446666','4afdc875a67a55528c224ce088be2ab8','2016-05-27 22:34:19','2016-06-15 17:03:16',1);
 /*Data for the table `u_user_role` */
 insert  into `u_user_role`(`uid`,`rid`) values (12,4),(11,3),(11,4),(1,1);
-   
+
     END
 ;;
 DELIMITER ;
