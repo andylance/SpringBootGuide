@@ -29,4 +29,12 @@ public class SysRole implements Serializable {
     public void setRoleDesc(String roleDesc) {
         this.roleDesc = roleDesc == null ? null : roleDesc.trim();
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "SysRole{" +
+                "id=" + id +
+                ", roleDesc='" + roleDesc + '\'' +
+                '}';
+    }
 }
