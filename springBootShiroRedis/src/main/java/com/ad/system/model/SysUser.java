@@ -3,7 +3,7 @@ package com.ad.system.model;
 import java.io.Serializable;
 
 /**
- * 用户
+ * 系统用户用户
  */
 public class SysUser implements Serializable {
     private static final long serialVersionUID = 4397314180209164600L;
