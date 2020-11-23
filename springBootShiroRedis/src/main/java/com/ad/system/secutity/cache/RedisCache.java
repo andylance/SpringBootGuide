@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * shiro cache实现, 使用redis实现
+ * shiro cache实现, 使用redis实现shiro cache缓存
  *
  * @param <K>
  * @param <V>
