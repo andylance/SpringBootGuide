@@ -6,6 +6,7 @@ import java.io.Serializable;
  * 系统用户角色
  */
 public class SysRole implements Serializable {
+//    private static final long serialVersionUID = 1383391516427315432L;
     private static final long serialVersionUID = 1383391516427315432L;
     private Integer id;
 
