@@ -23,6 +23,7 @@ public class RedisCacheManager implements CacheManager {
 
     // fast lookup by name map
     private final ConcurrentMap<String, Cache> caches = new ConcurrentHashMap<String, Cache>();
+    // redis 序列化
     private RedisSerializer keySerializer = new StringSerializer();
     private RedisSerializer valueSerializer = new ObjectSerializer();
 
