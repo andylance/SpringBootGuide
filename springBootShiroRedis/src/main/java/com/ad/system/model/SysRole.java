@@ -7,6 +7,9 @@ import java.io.Serializable;
  */
 public class SysRole implements Serializable {
     private static final long serialVersionUID = 1383391516427315432L;
+    /**
+     * 角色ID
+     */
     private Integer id;
 
     /**
