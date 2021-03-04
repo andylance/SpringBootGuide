@@ -16,6 +16,7 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * redis缓存管理器修改
+ * @author Andylance
  */
 public class RedisCacheManager implements CacheManager {
 
