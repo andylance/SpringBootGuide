@@ -18,6 +18,7 @@ public class PermissionAuthcFilter extends AccessControlFilter {
     public PermissionAuthcFilter() {
     }
 
+    @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
         if (AnonFilter.ALLOW_PASS_PERMISSION_VALUE.equals(request.getAttribute(AnonFilter.ALLOW_PASS_PERMISSION_KEY))) {
             return true;
@@ -25,6 +26,7 @@ public class PermissionAuthcFilter extends AccessControlFilter {
         return false;
     }
 
+    @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
         Subject currenUser = this.getSubject(request, response);
         if (!currenUser.isAuthenticated()) {

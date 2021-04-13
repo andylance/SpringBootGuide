@@ -22,15 +22,21 @@ public class RedisCacheManager implements CacheManager {
 
     private final Logger logger = LoggerFactory.getLogger(RedisCacheManager.class);
 
-    // fast lookup by name map
+    /**
+     * fast lookup by name map
+     */
     private final ConcurrentMap<String, Cache> caches = new ConcurrentHashMap<String, Cache>();
-    // redis 序列化
+    /**
+     * redis 序列化
+     */
     private RedisSerializer keySerializer = new StringSerializer();
     private RedisSerializer valueSerializer = new ObjectSerializer();
 
     private IRedisManager redisManager;
 
-    // expire time in seconds
+    /**
+     * expire time in seconds
+     */
     public static final int DEFAULT_EXPIRE = 1800;
     private int expire = DEFAULT_EXPIRE;
 
