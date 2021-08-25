@@ -1,10 +1,14 @@
 package com.ad.system.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SysResources implements Serializable {
     private static final long serialVersionUID = 884043233553807751L;
     private Integer id;
