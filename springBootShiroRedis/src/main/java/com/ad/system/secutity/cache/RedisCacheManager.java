@@ -1,5 +1,6 @@
 package com.ad.system.secutity.cache;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
 import org.apache.shiro.cache.CacheManager;
@@ -18,9 +19,10 @@ import java.util.concurrent.ConcurrentMap;
  * redis缓存管理器修改
  * @author Andylance
  */
+@Slf4j
 public class RedisCacheManager implements CacheManager {
 
-    private final Logger logger = LoggerFactory.getLogger(RedisCacheManager.class);
+//    private final Logger logger = LoggerFactory.getLogger(RedisCacheManager.class);
 
     /**
      * fast lookup by name map
@@ -51,7 +53,7 @@ public class RedisCacheManager implements CacheManager {
 
     @Override
     public <K, V> Cache<K, V> getCache(String name) throws CacheException {
-        logger.debug("get cache, name=" + name);
+        log.debug("get cache, name=" + name);
 
         Cache cache = caches.get(name);
 
