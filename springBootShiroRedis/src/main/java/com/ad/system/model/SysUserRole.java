@@ -1,7 +1,14 @@
 package com.ad.system.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SysUserRole implements Serializable {
     private static final long serialVersionUID = 8192994587511635568L;
     private Integer id;
@@ -9,28 +16,4 @@ public class SysUserRole implements Serializable {
     private Integer userId;
 
     private Integer roleId;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
-    }
 }
