@@ -6,6 +6,10 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+/**
+ * @author Andylance
+ *
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
