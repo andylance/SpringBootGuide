@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SysRoleResources implements Serializable {
-    private static final long serialVersionUID = 6265196654259238748L;
+    private static final long serialVersionUID = 7419435804582489930L;
     private Integer id;
 
     private Integer roleId;
