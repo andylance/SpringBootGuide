@@ -26,6 +26,8 @@ import java.util.Set;
 
 /**
  * shiro cache实现, 使用redis实现shiro cache缓存
+ * @author Andylance
+ * redis缓存管理器修改
  *
  * @param <K>
  * @param <V>
