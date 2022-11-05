@@ -15,6 +15,9 @@ public class SysResources implements Serializable {
     private static final long serialVersionUID = 884043233553807751L;
     private Integer id;
 
+    /**
+     * 用户名
+     */
     private String userName;
 
     private String resUrl;
