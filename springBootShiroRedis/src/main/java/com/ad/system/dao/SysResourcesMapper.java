@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.Set;
 
+/**
+ * @author Andylance
+ */
 @Mapper
 public interface SysResourcesMapper {
     int deleteByPrimaryKey(Integer id);
