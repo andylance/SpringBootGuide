@@ -7,6 +7,7 @@ import java.util.Set;
 
 /**
  * @author Andylance
+ * 系统资源
  */
 @Mapper
 public interface SysResourcesMapper {
