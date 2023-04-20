@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 /**
  * @author Andylance
+ * 系统角色资源
  */
 @Data
 @AllArgsConstructor
