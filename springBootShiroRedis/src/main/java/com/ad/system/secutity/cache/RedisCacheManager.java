@@ -17,6 +17,7 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * @author Andylance
+ * shiro cache实现, 使用redis实现shiro cache缓存
  * redis缓存管理器修改
  */
 @Slf4j
