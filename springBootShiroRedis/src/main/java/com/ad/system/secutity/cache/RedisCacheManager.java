@@ -9,8 +9,6 @@ import org.crazycake.shiro.RedisCache;
 import org.crazycake.shiro.serializer.ObjectSerializer;
 import org.crazycake.shiro.serializer.RedisSerializer;
 import org.crazycake.shiro.serializer.StringSerializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
