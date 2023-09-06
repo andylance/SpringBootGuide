@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * @author Andylance
+ * @author ting
  * 系统用户用户
  */
 @Data
