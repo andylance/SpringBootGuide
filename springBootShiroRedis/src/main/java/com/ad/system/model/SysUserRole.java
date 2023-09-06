@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Andylance
+ * @author ting
  *
  */
 @Data
